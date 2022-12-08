@@ -14,6 +14,9 @@ public class Object {
     public int getLength(){return length;}
     public int getWidth(){return width;}
 
+    public void changeLength(int length){this.length = length;}
+    public void changeWidth(int width){this.width = width;}
+
     public String drawRec(){
         StringBuilder row = new StringBuilder();
         row.append("#  ".repeat(Math.max(0, width)));
