@@ -6,8 +6,13 @@ public class Object {
     public Object(int recLen, int recWid){
         length = recLen;
         width = recWid;
-        if ((recLen == recWid) || (recLen <= 0 || recWid <= 0)){
-            throw new InputMismatchException("Please use the program as intended :)");
+
+        if (recLen == recWid){
+            throw new InputMismatchException("That's a square!");
+        }
+
+        else if (recLen <= 0 || recWid <= 0){
+            throw new InputMismatchException("Ah yes, a negative rectangle! Try again genius.");
         }
     }
 
@@ -29,8 +34,8 @@ public class Object {
     }
 
     public String tallWideRec(Object rect){
-        if (rect.getLength() > rect.getWidth()){return "Tall Rectangle";}
-        else{return "Wide Rectangle";}
+        if (rect.getLength() > rect.getWidth()){return "You have a tall rectangle";}
+        else{return "You have a wide rectangle";}
     }
 
 }
